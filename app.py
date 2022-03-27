@@ -1,5 +1,6 @@
 from flask import Flask
 import threading
+import logging
 import time
 
 app = Flask(__name__)
@@ -9,7 +10,7 @@ def thread_function(t):
     while True:
         time.sleep(t)
         count+=2
-        print(f"OK {count}")
+        logging.info(f"OK {count}")
 
 
 @app.route("/")
