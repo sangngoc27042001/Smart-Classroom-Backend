@@ -15,6 +15,7 @@ def thread_function(t):
 
 @app.route("/")
 def index():
+    global count
     logging.info(f"OK {count}")
     print(f"OK {count}")
     return "Hello"
