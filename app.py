@@ -15,6 +15,8 @@ def thread_function(t):
 
 @app.route("/")
 def index():
+    logging.info(f"OK {count}")
+    print(f"OK {count}")
     return "Hello"
 
 if __name__=="__main__":
